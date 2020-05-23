@@ -6,17 +6,16 @@ exercises 2 on runstoneacademy
 # Write a Python program to solve the general version of the above problem. 
 
 def alarm():
-    while True:
-        x = int(input("What time is it: ")) # 24 hour clock
-        if x >= 0 and x <= 24:
-            break
-    y = int(input("Set your alarm to go off in: ")) 
+   while True:
+       x = int(input("What time is it: ")) # 24 hour clock
+       if x >= 0 and x <= 24:
+           break
+   y = int(input("Set your alarm to go off in: ")) 
 # Your program should output what the time will be on the clock when the alarm goes off.
+   time_on_the_clock = x + y
+   time_of_the_day = time_on_the_clock % 24 
 
-    time_on_the_clock = x + y
-    time_of_the_day = time_on_the_clock % 24 
-
-    return("It is now: " + str(time_of_the_day))  
+   return("It is now: " + str(time_of_the_day))  
 alarm()
  
 
@@ -25,18 +24,18 @@ alarm()
 # Write a general version of the program 
 
 def days_of_the_week():
-    while True:
-        x = int(input("Your starting day:")) #From 0 to 6 
-        if x >= 0 and x <= 24:
-            break
-    y = int(input("Length of your stay:")) #length of your stay
-    z = x + y
+   while True:
+       x = int(input("Your starting day:")) #From 0 to 6 
+       if x >= 0 and x <= 24:
+           break
+   y = int(input("Length of your stay:")) #length of your stay
+   z = x + y
 
 # Conversion:
-    list_day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-    modulo = z%7 # Range from 0 to 6 
-    result = list_day[modulo] 
+   list_day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+   modulo = z%7 # Range from 0 to 6 
+   result = list_day[modulo] 
     
-    return result
+   return result
 
 days_of_the_week()
