@@ -1,0 +1,75 @@
+# Python-Exercise
+exercises 2 on runstoneacademy
+import sys #this allows you to use the sys.exit command to quit/logout of the application
+# def main():
+#     login()
+    
+def login():
+    username = "duck"
+    password = "123"
+    
+    while True:
+        answer1 = input("Enter username: ")
+        answer2 = input("Enter password: ")
+        
+        if answer1 == username and answer2 == password:
+            print("Welcome - Access Granted\n")
+            break
+        
+dictionary = {"Large Coffee": 25,"Medium Coffee": 20,
+              "Large Milktea": 35, "Medium Milktea": 30,
+              "Large Lemonade": 20, "Medium Lemonade": 15}
+
+def menu():
+    print("-------Welcome to Ducky Coffee Shop-------\n")
+    print("Here are your choices: \n")
+    
+    print(dictionary)
+    
+    while True:
+        choice = input("What is your order?\n")
+        if choice in dictionary:
+            while True:
+                tip = input("Do you wanna tip for us (y/n)?\n")
+                if tip == "y":
+                    tip1 = int(input("How much? \n"))
+                    total_cost = dictionary[choice] + tip1
+        
+                    print("------Thank you for using our service :D-------\n")
+                    print("Here is your {} and it costs {}k". format(choice, total_cost))
+                    break
+                if tip == "n":
+                    print("------Thank you for using our service :D-------\n")
+                    print("Here is your {} and it costs {}k". format(choice, dictionary[choice]))
+                    break
+            break
+
+
+#     while True:
+#         if tip == "y":
+#             tip1 = int(input("How much? \n"))
+#             total_cost = dictionary[choice] + tip1
+        
+#             print("------Thank you for using our service :D-------\n")
+#             print("Here is your {} and it costs {}k". format(choice, total_cost))
+#             break
+    
+#         if tip == "n":
+#             print("------Thank you for using our service :D-------\n")
+#             print("Here is your {} and it costs {}k". format(choice, dictionary[choice]))
+#             break
+
+def feedback():
+    while True:
+        feedback = input("Do you have any feedback (y/n)? \n")
+        if feedback == "y":
+            feedback = input("Please specify your feedback: \n")
+            print("***Thank you for you feedback! We appreciate your contribution*** \n")
+            break
+    
+# main()
+login()
+menu()
+print("\n")
+feedback()
+
