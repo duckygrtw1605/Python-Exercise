@@ -1,8 +1,6 @@
-# Python-Exercise
-exercises 2 on runstoneacademy
 import sys #this allows you to use the sys.exit command to quit/logout of the application
-# def main():
-#     login()
+def main():
+    login()
     
 def login():
     username = "duck"
@@ -44,21 +42,6 @@ def menu():
                     break
             break
 
-
-#     while True:
-#         if tip == "y":
-#             tip1 = int(input("How much? \n"))
-#             total_cost = dictionary[choice] + tip1
-        
-#             print("------Thank you for using our service :D-------\n")
-#             print("Here is your {} and it costs {}k". format(choice, total_cost))
-#             break
-    
-#         if tip == "n":
-#             print("------Thank you for using our service :D-------\n")
-#             print("Here is your {} and it costs {}k". format(choice, dictionary[choice]))
-#             break
-
 def feedback():
     while True:
         feedback = input("Do you have any feedback (y/n)? \n")
@@ -67,9 +50,8 @@ def feedback():
             print("***Thank you for you feedback! We appreciate your contribution*** \n")
             break
     
-# main()
+main()
 login()
 menu()
 print("\n")
 feedback()
-
