@@ -1,0 +1,31 @@
+#Given the participants' score sheet for your University Sports Day, you are required to find the runner-up score. 
+#You are given  scores. Store them in a list and find the score of the runner-up.
+#Source: hackerrank.com/challenges/find-second-maximum-number-in-a-list/problem
+
+if __name__ == '__main__':
+    n = int(input())
+    arr = map(int, input().split())
+
+    no_dups = sorted(list(set(arr))) #remove duplicates and sort the list out
+        
+    runner_up = no_dups[-2] #find the second-best score
+    print(runner_up)
+    
+#You have a record of  students. Each record contains the student's name, and their percent marks in Maths, Physics and Chemistry. 
+#The marks can be floating values. The user enters some integer  followed by the names and marks for  students. 
+#You are required to save the record in a dictionary data type. The user then enters a student's name. 
+#Output the average percentage marks obtained by that student, correct to two decimal places.
+#Source: https://www.hackerrank.com/challenges/finding-the-percentage/problem
+
+if __name__ == '__main__': # Cach goi ham main 
+    n = int(input())
+    student_marks = {} # dictionary to save student marks 
+    for _ in range(n): # for loop 
+        name, *line = input().split() # split input ra name, line
+        scores = list(map(float, line)) # convert line qua list 
+        student_marks[name] = scores # em insert pair key: value vao trong dictionary
+        # key is name, scores is your value 
+    query_name = input() # ten cua hoc sinh em muon tinh diem trung binh     
+
+    average = sum(student_marks[query_name])/len(student_marks[query_name])
+    print('{0:.2f}'.format(average))
