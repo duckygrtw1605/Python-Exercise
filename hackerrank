@@ -83,3 +83,18 @@ if __name__ == '__main__':
     s = input()
     result = swap_case(s)
     print(result)
+    
+    
+    
+#split_and_join_string:
+
+def split_and_join(line):
+    string = str(line)
+    string = string.split(" ")
+    string = "-".join(string)
+    return string
+
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
