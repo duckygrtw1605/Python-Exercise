@@ -25,7 +25,21 @@ if __name__ == '__main__': # Cach goi ham main
         scores = list(map(float, line)) # convert line qua list 
         student_marks[name] = scores # em insert pair key: value vao trong dictionary
         # key is name, scores is your value 
-    query_name = input() # ten cua hoc sinh em muon tinh diem trung binh     
-
+    query_name = input() # ten cua hoc sinh em muon tinh diem trung binh    
+    
     average = sum(student_marks[query_name])/len(student_marks[query_name])
     print('{0:.2f}'.format(average))
+    
+    
+    
+#You are given the firstname and lastname of a person on two different lines. Your task is to read them and print the following:
+#Hello firstname lastname! You just delved into python.
+
+def print_full_name(a, b):
+    print("Hello {} {}! You just delved into python.". format(a,b))
+
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
+
