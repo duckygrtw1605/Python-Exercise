@@ -77,7 +77,17 @@ if __name__ == '__main__':
 #In other words, convert all lowercase letters to uppercase letters and vice versa.
 
 def swap_case(s):
-    return(s.swapcase())
+    ele = 0
+    ele1 = 0
+    new_string = ''
+    for letter in s:
+        if (letter.isupper()) == True: 
+            ele += 1
+            new_string += (letter.lower())
+        elif (letter.isupper()) == False:
+            ele1 += 1
+            new_string += (letter.upper())
+    return new_string
 
 if __name__ == '__main__':
     s = input()
